@@ -1,0 +1,31 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(py -0p)",
+      "Bash(py -3.12 --version)",
+      "Bash(pip --version)",
+      "Bash(py -3.12 -c ' *)",
+      "Bash(py -3.12 -c \"import pkgutil; print\\('tensorflow_datasets' , bool\\(pkgutil.find_loader\\('tensorflow_datasets'\\)\\)\\); print\\('datasets', bool\\(pkgutil.find_loader\\('datasets'\\)\\)\\)\")",
+      "Bash(py -3.12)",
+      "Bash(py -3.12 -m venv .venv)",
+      "Bash(./.venv/Scripts/python.exe -m pip install --upgrade pip)",
+      "Bash(./.venv/Scripts/python.exe -m pip install --dry-run -r requirements.txt)",
+      "Bash(./.venv/Scripts/python.exe -m pip install -r requirements.txt)",
+      "Bash(echo \"INSTALL_DONE\")",
+      "Bash(./.venv/Scripts/python.exe -m ipykernel install --user --name tp-final-iia --display-name \"Python \\(TP-FINAL-IIA .venv\\)\")",
+      "Bash(./.venv/Scripts/python.exe -m jupyter kernelspec list)",
+      "Bash(wmic path *)",
+      "Bash(grep -v \"^$\")",
+      "Bash(nvidia-smi --query-gpu=name,memory.total,driver_version --format=csv)",
+      "Bash(./.venv/Scripts/python.exe -c \"import os; os.environ['TF_CPP_MIN_LOG_LEVEL']='3'; import tensorflow as tf; print\\('TF', tf.__version__\\); print\\('GPUs visibles:', tf.config.list_physical_devices\\('GPU'\\)\\)\")",
+      "Bash(wsl --status)",
+      "Bash(wsl -l -v)",
+      "Bash(wsl --version)",
+      "Bash(rm -f _wsl_diag.sh _wsl_gputest.sh _wsl_setup_kernel.sh _wsl_traintest.sh)",
+      "Bash(wsl -d Ubuntu -- cat /home/bussa/.local/share/jupyter/kernels/tp-final-gpu/kernel.json)",
+      "Bash(git add *)",
+      "Bash(git commit -m ' *)",
+      "Bash(git config *)"
+    ]
+  }
+}
