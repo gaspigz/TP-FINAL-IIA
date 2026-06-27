@@ -28,6 +28,7 @@ profile_default/
 ipython_config.py
 
 # === Modelos y artefactos entrenados ===
+*.keras
 *.h5
 *.hdf5
 *.pb
