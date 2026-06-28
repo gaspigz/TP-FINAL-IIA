@@ -265,11 +265,33 @@ Comprobá que la GPU se usa:
 
 ---
 
+## Módulo de inferencia en tiempo real — `app.py`
+
+Una vez entrenado el modelo desde el notebook, podés usarlo directamente con la cámara:
+
+```bash
+# con el .venv activo
+python app.py
+```
+
+Al arrancar:
+1. Lista los archivos `.keras` que haya en la carpeta `models/`.
+2. Te pide que elijas uno por número.
+3. Abre la cámara (índice 0 por defecto) y muestra la clasificación en tiempo real.
+4. Presioná **`q`** o **Esc** para cerrar.
+
+> Los modelos deben estar en `models/` con extensión `.keras`.
+> El notebook los guarda ahí al terminar el entrenamiento.
+
+---
+
 ## Estructura del proyecto
 
 ```
 .
 ├── TP_Final_IIA_Bussanich,_Castagnino,_Gimenez.ipynb   # notebook principal
+├── app.py                                              # inferencia en tiempo real (cámara)
+├── models/                                             # modelos .keras entrenados
 ├── requirements.txt                                    # dependencias (local)
 ├── .gitignore
 └── README.md
