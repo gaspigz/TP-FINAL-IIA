@@ -25,7 +25,8 @@
       "Bash(wsl -d Ubuntu -- cat /home/bussa/.local/share/jupyter/kernels/tp-final-gpu/kernel.json)",
       "Bash(git add *)",
       "Bash(git commit -m ' *)",
-      "Bash(git config *)"
+      "Bash(git config *)",
+      "Bash(python3 -c ' *)"
     ]
   }
 }
