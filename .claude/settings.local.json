@@ -26,7 +26,26 @@
       "Bash(git add *)",
       "Bash(git commit -m ' *)",
       "Bash(git config *)",
-      "Bash(python3 -c ' *)"
+      "Bash(py -3.12 _build.py)",
+      "Bash(py -3.12 _patch.py)",
+      "Bash(stat -c '%y' \"TP_Final_IIA_Bussanich,_Castagnino,_Gimenez.ipynb\")",
+      "Bash(powershell -command \"\\(Get-Item 'TP_Final_IIA_Bussanich,_Castagnino,_Gimenez.ipynb'\\).LastWriteTime\")",
+      "Bash(py -3.12 _cachefix.py)",
+      "Bash(rm -f _cachefix.py)",
+      "Bash(py -3.12 -c \"import json; json.load\\(open\\('TP_Final_IIA_Bussanich,_Castagnino,_Gimenez.ipynb',encoding='utf-8'\\)\\); print\\('JSON OK'\\)\")",
+      "PowerShell(Get-Process | Group-Object -Property ProcessName | ForEach-Object { [PSCustomObject]@{ Nombre = $_.Name; MB = [math]::Round\\(\\(\\($_.Group | Measure-Object WorkingSet64 -Sum\\).Sum\\)/1MB,0\\); Procesos = $_.Count } } | Sort-Object MB -Descending | Select-Object -First 20 | Format-Table -AutoSize)",
+      "Bash(wsl -d Ubuntu -- bash -c 'echo \"=== Memoria de WSL ===\"; free -h; echo \"=== Swap ===\"; swapon --show 2>/dev/null || echo \"\\(sin swap activa todavía\\)\"; echo \"=== GPU ===\"; nvidia-smi --query-gpu=name,memory.total --format=csv,noheader')",
+      "Bash(py -3.12 _pipefix.py)",
+      "Bash(rm -f _pipefix.py _pipefix.txt)",
+      "Bash(wsl -d Ubuntu -- bash -c 'rm -f /tmp/tp_train* /tmp/tp_val* /tmp/tp_test*; echo \"cache viejo borrado\"; ls /tmp/tp_* 2>/dev/null || echo \"\\(no quedan archivos tp_*\\)\"')",
+      "Bash(git check-ignore *)",
+      "Bash(awk '{print $5, $9}')",
+      "Bash(git push *)",
+      "Bash(py -3.12 _insert.py)",
+      "Bash(py -3.12 _scales.py)",
+      "Bash(git fetch *)",
+      "Bash(git pull *)",
+      "Bash(git stash *)"
     ]
   }
 }
